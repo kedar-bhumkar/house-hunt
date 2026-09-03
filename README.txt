@@ -5,9 +5,9 @@ Technical README
 
 Two applications share one codebase:
 
-  1. A property-hunting dashboard for detached single-family homes in Eden
-     Prairie, MN up to $650K -- 69 curated listings with filtering, comparison,
-     mapping, mortgage math, background research and a persisted decision board.
+  1. A property-hunting dashboard over a curated set of listings, with
+     filtering, comparison, mapping, mortgage math, background research and a
+     persisted decision board.
 
   2. A GPT-driven negotiation simulator that plays three independent
      buyer-vs-seller negotiations over any one of those listings, where the
@@ -74,7 +74,7 @@ Contents
 ================================================================================
 
   app/
-    page.tsx                    69-listing static House[] array + <Home/>
+    page.tsx                    static House[] listing array + <Home/>
     house-dashboard.tsx         the entire dashboard: filters, views, compare,
                                 research, map, EMI calculator, rebuild modal
     negotiation-simulator.tsx   simulator UI + the client-side driver loop
