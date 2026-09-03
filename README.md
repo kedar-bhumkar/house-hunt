@@ -59,6 +59,8 @@ The OpenAI key is read only inside the Worker and never reaches the browser.
 ```text
 app/
   page.tsx                    static House[] listing array + <Home/>
+  market.ts                   sample market: city, map center, boundary,
+                              amenity markers
   house-dashboard.tsx         the entire dashboard: filters, views, compare,
                               research, map, EMI calculator, rebuild modal
   negotiation-simulator.tsx   simulator UI + the client-side driver loop
@@ -89,7 +91,9 @@ examples/d1/                  untouched starter example surface
 
 ### 4.1 Inventory
 
-Listings are a static, hand-curated array in `app/page.tsx` — there is no scraper in this repo. Each entry carries address, price, beds, baths, sqft, year built, listing status, source (Zillow / Homes.com / Redfin), listing URL and a facade photo URL. Attached and twin homes are deliberately excluded. Homes first seen in a given refresh are flagged `isNew`, which pins them above whatever sort is active until the next refresh.
+Listings are a static, hand-curated array in `app/page.tsx` — there is no scraper in this repo. Each entry carries address, price, beds, baths, sqft, year built, listing status, source (Zillow / Homes.com / Redfin), listing URL and an optional facade photo URL. Attached and twin homes are deliberately excluded. Homes first seen in a given refresh are flagged `isNew`, which pins them above whatever sort is active until the next refresh.
+
+**The listings shipped here are fictional sample data**, and `app/market.ts` holds the matching placeholder city, map center, boundary polygon and amenity markers. Point both at a real market to use the dashboard for an actual search; until you do, the geocoder will not resolve the sample addresses, so the map renders its amenities without price pins.
 
 ### 4.2 Three views of the same filtered set
 

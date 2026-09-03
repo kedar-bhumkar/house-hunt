@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "House Hunt",
-  description: "A live decision dashboard for Eden Prairie homes through $650,000.",
+  description: "A live decision dashboard for a curated set of home listings.",
   other: {
     "codex-preview": "development",
   },

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { House } from "./page";
 import type { Inclination, NegotiationAction, NegotiationSimulation, ScenarioName, ScenarioRun, SimulationConfig } from "./negotiation-types";
+import { qualifiedAddress } from "./market";
 
 type Props = {
   house: House;
@@ -231,7 +232,7 @@ export default function NegotiationSimulator({ house, backgroundResearch, onClos
           accessKey: accessKey.trim(),
           property: {
             houseId: house.id,
-            address: `${house.address}, Eden Prairie, MN`,
+            address: qualifiedAddress(house.address),
             listingUrl: house.url,
             listPrice: house.price,
             beds: house.beds,

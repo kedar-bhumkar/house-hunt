@@ -1,5 +1,5 @@
 {
-  "name": "kedar-house-hunt",
+  "name": "house-hunt",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -40,5 +40,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "Kedar's Eden Prairie House Hunt"
+  "displayName": "House Hunt"
 }

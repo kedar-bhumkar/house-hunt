@@ -1,10 +1,12 @@
+import { qualifiedAddress } from "../../market";
+
 const censusEndpoint = "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress";
 
 type Coordinate = { lat: number; lng: number } | null;
 
 async function geocode(address: string): Promise<[string, Coordinate]> {
   const query = new URLSearchParams({
-    address: `${address}, Eden Prairie, MN`,
+    address: qualifiedAddress(address),
     benchmark: "Public_AR_Current",
     format: "json",
   });
